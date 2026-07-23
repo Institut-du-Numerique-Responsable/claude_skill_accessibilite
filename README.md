@@ -176,8 +176,10 @@ Contributions bienvenues via **pull request** — pas de push direct sur
 ## Ressources officielles
 
 - [Modèle officiel de déclaration d'accessibilité](https://design.numerique.gouv.fr/outils/exemple-declaration-accessibilite/) — design system de l'État
-- [RGAA — Référentiel Général d'Amélioration de l'Accessibilité](https://accessibilite.numerique.gouv.fr/)
-- [Article 47 de la loi n°2005-102 du 11 février 2005](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000031977820)
+- [RGAA — Référentiel Général d'Amélioration de l'Accessibilité (version 4)](https://accessibilite.numerique.gouv.fr/) — déclinaison française des WCAG, référentiel applicable en France
+- [WCAG — Web Content Accessibility Guidelines (W3C)](https://www.w3.org/WAI/standards-guidelines/wcag/) — norme internationale dont le RGAA est la transposition réglementaire française
+- [Article 47 de la loi n°2005-102 du 11 février 2005](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000031977820) — obligation légale d'accessibilité
+- [Obligation de déclaration d'accessibilité (accessibilite.numerique.gouv.fr)](https://accessibilite.numerique.gouv.fr/obligations/) — qui est concerné, contenu obligatoire, sanctions
 - [Défenseur des droits — formulaire de saisine](https://formulaire.defenseurdesdroits.fr/)
 
 ## Mots-clés
