@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Claude Skill — Déclaration d'accessibilité RGAA</title>
-<meta name="description" content="Skill Claude pour générer une déclaration d'accessibilité RGAA conforme au modèle officiel de l'État, par l'Institut du Numérique Responsable.">
-<meta property="og:title" content="Claude Skill — Déclaration d'accessibilité RGAA">
+<title>Déclaration d'accessibilité RGAA : Skill Claude</title>
+<meta name="description" content="Skill Claude qui génère une déclaration d'accessibilité RGAA conforme au modèle officiel de l'État, publié par l'Institut du Numérique Responsable.">
+<meta property="og:title" content="Déclaration d'accessibilité RGAA : Skill Claude">
 <meta property="og:description" content="Générer une déclaration d'accessibilité RGAA conforme au modèle officiel gouv.fr, directement dans Claude.">
 <meta property="og:type" content="website">
 <style>
@@ -45,14 +45,20 @@
   <span class="badge">MIT</span>
 </p>
 
-<h1>Déclaration d'accessibilité RGAA — Skill Claude</h1>
+<h1>Déclaration d'accessibilité RGAA, sans le repartir de zéro</h1>
 
 <p>
-  Ce skill pour <a href="https://claude.com/claude-code">Claude Code</a>
-  génère une <strong>déclaration d'accessibilité</strong> conforme au
-  <a href="https://design.numerique.gouv.fr/outils/exemple-declaration-accessibilite/">modèle officiel du design system de l'État</a>,
-  au titre de l'article 47 de la loi n°2005-102 et du RGAA (Référentiel
-  Général d'Amélioration de l'Accessibilité).
+  Toute administration doit publier une déclaration d'accessibilité qui suit
+  un modèle légal strict. Rédiger ce document à la main prend du temps et
+  laisse la place à l'erreur : une section oubliée, un taux de conformité
+  qui ne correspond plus à l'audit, une phrase du texte légal reformulée par
+  inadvertance. Ce skill pour <a href="https://claude.com/claude-code">Claude Code</a>
+  prend vos résultats d'audit RGAA et rédige la déclaration à votre place, en
+  suivant le
+  <a href="https://design.numerique.gouv.fr/outils/exemple-declaration-accessibilite/">modèle officiel du design system de l'État</a>.
+  Les mentions légales restent intactes : l'engagement au titre de l'article
+  47 de la loi n°2005-102, la procédure de recours auprès du Défenseur des
+  droits.
 </p>
 
 <p>
@@ -60,15 +66,34 @@
   Responsable</a>.
 </p>
 
+<h2>Ce que le skill fait pour vous</h2>
+<p>
+  Vous lui donnez votre audit RGAA : taux de conformité, non-conformités
+  relevées, éventuelles dérogations pour charge disproportionnée,
+  environnements de test utilisés. Il pose les questions qui manquent au
+  lieu de deviner, puis génère la déclaration complète au format Markdown.
+  Le texte légal reste celui du modèle officiel, mot pour mot.
+</p>
+<ul>
+  <li>Collecte les données d'audit RGAA : taux de conformité, non-conformités, dérogations.</li>
+  <li>Génère la déclaration au format Markdown, texte légal inchangé.</li>
+  <li>Signale les informations manquantes au lieu d'inventer un résultat.</li>
+</ul>
+
+<h2>Ce qu'il ne fait pas</h2>
+<p>
+  Il ne réalise pas l'audit RGAA à votre place : il faut un audit existant,
+  fait par un outil dédié ou un auditeur qualifié. Il ne corrige pas non
+  plus le code de votre site pour le rendre accessible. C'est un skill de
+  rédaction, pas de remédiation technique.
+</p>
+
 <h2>Installation</h2>
 <pre><code>cp -r skills/rgaa-declaration-accessibilite ~/.claude/skills/</code></pre>
-
-<h2>Fonctionnement</h2>
-<ul>
-  <li>Collecte les données d'audit RGAA (taux de conformité, non-conformités, dérogations).</li>
-  <li>Génère la déclaration au format Markdown, texte légal inchangé.</li>
-  <li>Signale les informations manquantes plutôt que d'inventer des résultats.</li>
-</ul>
+<p>
+  Vous pouvez aussi le déposer dans <code>.claude/skills/</code> à la racine
+  d'un projet, pour ne l'activer que sur ce projet.
+</p>
 
 <h2>Code source</h2>
 <p>
@@ -77,12 +102,21 @@
 
 <h2>Contribuer</h2>
 <p>
-  Contributions via pull request — voir
+  Les contributions passent par une pull request, voir
   <a href="https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+  Si vous modifiez le texte légal du modèle, expliquez l'écart constaté avec
+  la version officielle : ce n'est pas un endroit pour reformuler le style.
 </p>
 
+<h2>Pour aller plus loin</h2>
+<ul>
+  <li><a href="https://accessibilite.numerique.gouv.fr/">RGAA, le référentiel officiel</a></li>
+  <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG, la norme W3C dont le RGAA est la transposition française</a></li>
+  <li><a href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000031977820">Article 47 de la loi n°2005-102</a></li>
+</ul>
+
 <footer>
-  Licence MIT — Institut du Numérique Responsable
+  Licence MIT, Institut du Numérique Responsable.
 </footer>
 </body>
 </html>
