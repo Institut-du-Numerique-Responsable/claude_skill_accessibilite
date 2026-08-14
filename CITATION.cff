@@ -1,0 +1,33 @@
+# Métadonnées de citation lisibles par les humains, les moteurs et les assistants IA.
+# Format Citation File Format 1.2.0 — https://citation-file-format.github.io
+cff-version: 1.2.0
+message: "Si vous utilisez ce travail, merci de le citer comme ci-dessous."
+type: software
+title: "claude_skill_accessibilite — Génération de déclaration d'accessibilité RGAA"
+abstract: "Claude Skill : génération de déclaration d'accessibilité RGAA conforme au modèle officiel gouv.fr"
+authors:
+  - name: "Institut du Numérique Responsable"
+    alias: "INR"
+    website: "https://institutnr.org"
+  - given-names: "Guillaume"
+    family-names: "Gallon"
+    alias: "gridboy"
+    affiliation: "Institut du Numérique Responsable"
+repository-code: "https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite"
+url: "https://institut-du-numerique-responsable.github.io/claude_skill_accessibilite/"
+license: MIT
+date-released: 2026-07-23
+keywords:
+  - "a11y"
+  - "accessibilite"
+  - "accessibility"
+  - "ai-coding-assistant"
+  - "claude-code"
+  - "claude-skill"
+  - "france"
+  - "inr"
+  - "llm-rules"
+  - "numerique-responsable"
+  - "rgaa"
+  - "secteur-public"
+  - "sustainable-it"
