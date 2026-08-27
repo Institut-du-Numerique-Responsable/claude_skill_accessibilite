@@ -1,0 +1,42 @@
+# Dependencies
+/node_modules/
+/.pnp
+.pnp.js
+
+# Python
+/__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local development
+.env
+.env.local
+.env.*.local
+
+# Audit and planning documents (internal only)
+/docs/audits/
+/docs/superpowers/
+
+# Codex internal files
+.Codex/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
