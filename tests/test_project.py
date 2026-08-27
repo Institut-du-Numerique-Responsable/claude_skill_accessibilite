@@ -502,5 +502,106 @@ class TestAuditorFieldDistinction(unittest.TestCase):
                          "Mention 'taux moyen de conformité' manquante")
 
 
+class TestTemplateRequiredFields(unittest.TestCase):
+    """Tests pour vérifier que le template exige tous les champs obligatoires."""
+
+    def setUp(self):
+        self.template_path = Path(__file__).parent.parent / "skills" / "rgaa-declaration-accessibilite" / "template.md"
+
+    def test_template_has_audit_date_placeholder(self):
+        """Le template doit exiger la date de l'audit."""
+        if not self.template_path.exists():
+            self.skipTest("template.md introuvable")
+        
+        content = self.template_path.read_text()
+        self.assertIn("{{date_audit}}", content,
+                     "Placeholder pour la date de l'audit manquant dans template.md")
+
+    def test_template_has_auditor_placeholder(self):
+        """Le template doit exiger l'auditeur."""
+        if not self.template_path.exists():
+            self.skipTest("template.md introuvable")
+        
+        content = self.template_path.read_text()
+        self.assertIn("{{auditeur}}", content,
+                     "Placeholder pour l'auditeur manquant dans template.md")
+
+    def test_template_has_rgaa_version_placeholder(self):
+        """Le template doit exiger la version du RGAA."""
+        if not self.template_path.exists():
+            self.skipTest("template.md introuvable")
+        
+        content = self.template_path.read_text()
+        # Le template doit cibler RGAA 4.1.2 explicitement
+        self.assertIn("RGAA 4.1.2", content,
+                     "RGAA 4.1.2 non mentionné explicitement dans template.md")
+
+    def test_template_has_contact_placeholder(self):
+        """Le template doit exiger un contact accessible."""
+        if not self.template_path.exists():
+            self.skipTest("template.md introuvable")
+        
+        content = self.template_path.read_text()
+        # Vérifier qu'il y a des placeholders pour les contacts
+        self.assertTrue(
+            "{{contact}}" in content or "{{moyen_contact}}" in content or "{{contacts}}" in content,
+            "Aucun placeholder pour le contact trouvé dans template.md"
+        )
+
+
+class TestHTMLMarkdownValidation(unittest.TestCase):
+    """Tests pour la validation HTML et Markdown."""
+
+    def setUp(self):
+        self.index_path = Path(__file__).parent.parent / "docs" / "index.html"
+        self.readme_path = Path(__file__).parent.parent / "README.md"
+
+    def test_index_html_basic_structure(self):
+        """La page publique doit avoir une structure HTML de base valide."""
+        if not self.index_path.exists():
+            self.skipTest("index.html introuvable")
+        
+        content = self.index_path.read_text()
+        
+        # Vérifier les éléments HTML de base
+        self.assertIn("<!doctype html>", content.lower(),
+                     "Doctype HTML manquant")
+        self.assertIn("<html", content.lower(),
+                     "Balise <html> manquante")
+        self.assertIn("<head>", content.lower(),
+                     "Balise <head> manquante")
+        self.assertIn("<body>", content.lower(),
+                     "Balise <body> manquante")
+        self.assertIn("<title>", content.lower(),
+                     "Balise <title> manquante")
+        
+        # Vérifier que les balises sont fermées
+        self.assertIn("</html>", content.lower(),
+                     "Balise </html> manquante")
+        self.assertIn("</head>", content.lower(),
+                     "Balise </head> manquante")
+        self.assertIn("</body>", content.lower(),
+                     "Balise </body> manquante")
+
+    def test_readme_markdown_structure(self):
+        """Le README doit avoir une structure Markdown valide."""
+        if not self.readme_path.exists():
+            self.skipTest("README.md introuvable")
+        
+        content = self.readme_path.read_text()
+        
+        # Vérifier qu'il y a un titre principal
+        self.assertTrue(content.startswith("# "),
+                       "Le README doit commencer par un titre principal (#)")
+        
+        # Vérifier qu'il y a des sections (##)
+        self.assertIn("## ", content,
+                     "Le README doit contenir des sections (##)")
+        
+        # Vérifier qu'il y a des listes
+        self.assertTrue("- " in content or "* " in content,
+                       "Le README doit contenir des listes")
+
+
 if __name__ == '__main__':
     unittest.main()
