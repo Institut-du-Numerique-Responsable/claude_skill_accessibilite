@@ -2,6 +2,9 @@
 name: rgaa-declaration-accessibilite
 version: 2.0.0
 description: Use when a user needs to draft, update, or review a French accessibility declaration (déclaration d'accessibilité) for a public-sector website, app, or intranet under RGAA 4.1.2 / article 47 of loi n°2005-102. Triggers on "déclaration d'accessibilité", "RGAA", "audit accessibilité conformité", or requests to fill the gouv.fr accessibility declaration template.
+repository: https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite
+tags: [accessibility, rgaa, french, government, compliance, declaration]
+license: MIT
 ---
 
 # RGAA Accessibility Declaration (RGAA 4.1.2)
