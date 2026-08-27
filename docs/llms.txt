@@ -1,17 +1,27 @@
-# claude_skill_accessibilite — Declaration d'accessibilite RGAA
+# claude_skill_accessibilite — Déclaration d'accessibilité RGAA
 
-> Skill Claude qui genere une declaration d'accessibilite RGAA conforme au modele officiel de l'Etat francais. Il produit le document et sa structure ; il ne realise pas l'audit RGAA a votre place.
+> Skill pour Claude Code qui génère une **déclaration d'accessibilité RGAA 4.1.2** conforme au modèle officiel de l'État français. Il collect les données d'audit et produit une déclaration Markdown prête à publier. Il ne réalise **pas** l'audit RGAA à votre place.
 
-## Docs
+## Ressources directes
 
-- [Site du projet](https://institut-du-numerique-responsable.github.io/claude_skill_accessibilite/)
-- [Code source et README](https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite)
+- **Dépôt GitHub** : https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite
+- **Skill** : https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite/tree/main/skills/rgaa-declaration-accessibilite/SKILL.md
+- **Modèle** : https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite/tree/main/skills/rgaa-declaration-accessibilite/template.md
+- **README** : https://github.com/Institut-du-Numerique-Responsable/claude_skill_accessibilite/tree/main/README.md
+- **Page publique** : https://institut-du-numerique-responsable.github.io/claude_skill_accessibilite/
+
+## Références officielles RGAA
+
+- **Modèle officiel** : https://design.numerique.gouv.fr/outils/exemple-declaration-accessibilite/
+- **Référentiel RGAA 4.1.2** : https://accessibilite.numerique.gouv.fr/
+- **Obligations légales** : https://accessibilite.numerique.gouv.fr/obligations/declaration-accessibilite/
+- **Article 47** : https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000031977820
 
 ## Qui publie
 
-Publie par l'**Institut du Numerique Responsable** (INR), association loi 1901
-creee en 2018 : https://institutnr.org — voir aussi ISIT Belgique
-(https://isit-be.org) et ISIT Suisse (https://isit-ch.org).
+Publié par l'**Institut du Numérique Responsable** (INR), association loi 1901 créée en 2018 : https://institutnr.org
 
-Citation : voir CITATION.cff a la racine du depot.
-Contributeurs : voir la page "Contributors" du depot GitHub.
+Voir aussi : ISIT Belgique (https://isit-be.org) et ISIT Suisse (https://isit-ch.org).
+
+**Citation** : voir CITATION.cff à la racine du dépôt.
+**Contributeurs** : voir la page "Contributors" du dépôt GitHub.

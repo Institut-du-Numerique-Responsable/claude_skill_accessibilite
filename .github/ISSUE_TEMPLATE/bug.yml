@@ -1,0 +1,35 @@
+name: Bug Report
+about: Signaler un bug dans le skill ou le template
+title: "[BUG] "
+labels: [bug, à trier]
+assignees: []
+
+---
+
+## Description du bug
+
+Une description claire et concise du bug.
+
+## Étapes pour reproduire
+
+1. Configuration utilisée (version de Claude, OS, etc.)
+2. Commande ou invocation exacte
+3. Entrées fournies
+4. Comportement attendu
+5. Comportement réel
+
+## Contexte supplémentaire
+
+- Version du skill : (si applicable)
+- Lien vers le référentiel RGAA utilisé : [accessibilite.numerique.gouv.fr](https://accessibilite.numerique.gouv.fr/)
+- Capture d'écran ou sortie de console (le cas échéant)
+
+## Vérification
+
+- [ ] J'ai vérifié que le bug n'a pas déjà été signalé
+- [ ] J'ai testé avec les dernières versions des fichiers
+- [ ] J'ai vérifié que mes entrées sont valides
+
+---
+
+*Merci pour votre signalement !*
